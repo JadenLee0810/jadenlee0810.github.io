@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* Tell the UA to render form controls / scrollbars in the system scheme so
+       the chrome matches our media-query dark mode. */
+    color-scheme: light dark;
+  }
+
+  body {
+    @apply bg-surface-light text-ink-light antialiased dark:bg-surface-dark dark:text-ink-dark;
+  }
+
+  /* Google strips the native clear/search decorations from its field. */
+  input[type='text']::-webkit-search-decoration,
+  input[type='text']::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+}
